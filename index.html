@@ -52,6 +52,7 @@
 
   AFRAME.registerComponent('a-button-listener', {
   init: function () {
+    var video = document.getElementById("video");
     var el = this.el;
     el.addEventListener('abuttondown', function (evt) {
       video.play();
