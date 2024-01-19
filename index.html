@@ -8,13 +8,13 @@
 
     <!-- Camera + controllers rig -->
 
-    <a-entity rotation="0 85 0" id="rig">
+    <a-entity rotation="0 85 0" id="rig" wasd-controls-enabled="false">
 
       <a-camera rotation="0 0 0" position="0 1.6 0"><a-cursor></a-cursor></a-camera>
 
-      <a-entity oculus-touch-controls="hand: left" a-button-listener></a-entity>
+      <a-entity oculus-touch-controls="hand: left" ></a-entity>
 
-      <a-entity oculus-touch-controls="hand: right" oculus-thumbstick-controls></a-entity>
+      <a-entity oculus-touch-controls="hand: right" oculus-thumbstick-controls a-button-listener></a-entity>
 
   </a-entity>
 
