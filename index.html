@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+
+      </head>
+<body>
+<a-scene>
+  <a-assets>
+    <video id="video" autoplay loop="true" src="StaticBellTower.mp4"> </video>
+  </a-assets>
+
+  <!-- Using the asset management system. -->
+  <a-videosphere src="#video" scale="-0.25 0.25 0.25"></a-videosphere>
+  <a-plane color="red" height="20" width="30" rotation="0 90 0" opacity="0.5" position="-9 0 0"></a-plane>
+
+</a-scene>
+
+<script>
+  // Get the video element by its id
+  var video = document.getElementById("video");
+
+  // Function to play the video
+  function playVideo() {
+    // Check if the video is paused, if yes, play it
+    if (video.paused) {
+      video.play();
+    }
+  }
+
+  // Add a click event listener to the document
+  document.addEventListener("click", playVideo);
+</script>
+</body>
+</html>
