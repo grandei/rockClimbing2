@@ -10,9 +10,9 @@
 
     <a-entity id="rig">
 
-      <a-camera position="0 1.6 0"></a-camera>
+      <a-camera position="0 1.6 0"><a-cursor></a-cursor></a-camera>
 
-      <a-entity oculus-touch-controls="hand: left" ></a-entity>
+      <a-entity oculus-touch-controls="hand: left" a-button-listener></a-entity>
 
       <a-entity oculus-touch-controls="hand: right" oculus-thumbstick-controls></a-entity>
 
@@ -49,6 +49,16 @@
 
   // Add a click event listener to the document
   document.addEventListener("click", playVideo);
+
+  AFRAME.registerComponent('a-button-listener', {
+  init: function () {
+    var el = this.el;
+    el.addEventListener('abuttondown', function (evt) {
+      video.play();
+    });
+  }
+});
+
 </script>
 </body>
 </html>
